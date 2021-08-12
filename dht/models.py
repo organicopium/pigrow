@@ -9,3 +9,12 @@ class DHT22Measure(models.Model):
 
     def __str__(self):
         return "{}%, {}°c {}".format(self.humidity, self.temperature, self.ts())
+
+class DhtData(models.Model):
+    humidity = models.FloatField(blank=True, null=True)
+    temperature = models.FloatField(blank=True, null=True)
+    ts = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'dht_data'

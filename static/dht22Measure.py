@@ -2,9 +2,8 @@ import sqlite3
 from sqlite3 import Error
 import time
 import datetime
-from dht.models import DHT22Measure
 
-db = "../db.sqlite3"
+db = "/home/pi/projects/pigrow/db.sqlite3"
 
 def create_table(conn):
     create_table_query = """ CREATE TABLE IF NOT EXISTS dht_data (

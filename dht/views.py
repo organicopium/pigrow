@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import measure
+from dht import measure
 
 
 
 def index(request):
-    humidity, temperature = measure.getCurrentMeasures()
-    return HttpResponse("temperature {:.2f}°c, humidity {:.2f}%".format(humidity, temperature))
+    #TODO read from db and respond
+    return HttpResponse("temperature {:.2f}°c, humidity {:.2f}%".format(-1, -1))

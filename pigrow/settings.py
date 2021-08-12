@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["192.168.1.22", "192.168.1.15"]
 # Application definition
 
 INSTALLED_APPS = [
-    'dht.apps.DhtConfig'
+    'dht.apps.DhtConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -35,18 +35,19 @@ def insertMeasure(conn, measure):
     conn.commit()
 
 def work():
-    conn = create_connection(db)
     import Adafruit_DHT
     sensor = Adafruit_DHT.DHT22
     sensor_pin = 18
-    while conn is not None:
+    while True:
+        conn = create_connection(db)
         create_table(conn)
         humidity, temperature = Adafruit_DHT.read_retry(sensor, sensor_pin)
         ts = datetime.datetime.now().timestamp()
         measure = (humidity, temperature, ts)
         insertMeasure(conn, measure)
         print("inserted {}".format(measure))
-        time.sleep(1)
+        conn.close()
+        time.sleep(20)
     print("Database connection does not exist")
 
 if __name__ == '__main__':

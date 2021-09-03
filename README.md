@@ -44,6 +44,6 @@ screen -dmS  raspcam ./campipeline.sh
 - Currently you could only see the LATEST temperature and humidity and if you want to analyze the previous readings, you have to manually open the database file with some kind of viewer. I will be adding support on the web-page to see all the historical readings as well and maybe even plot some graphs to see the change in these variables.
 - Addition of Relays or Smart Plugs so you could turn on/off the humidifier and lights form the web-page.
 
-###In Action
+### In Action
 ![screenshot of the system in action](https://github.com/organicopium/pigrow/blob/main/example2.png?raw=true)
 ![picture of the physical setup](https://github.com/organicopium/pigrow/blob/main/setup2.jpg?raw=true)
